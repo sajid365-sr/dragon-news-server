@@ -15,6 +15,11 @@ app.get("/news-categories", (req, res) => {
   res.send(categories);
 });
 
+// Get all news
+app.get('/news', (req,res) =>{
+    res.send(news);
+})
+
 // Get specific category news
 app.get("/category/:id", (req, res) => {
   const id = req.params.id;
