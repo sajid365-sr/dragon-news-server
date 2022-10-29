@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const cors = require("cors");
+const cors = require("cors"); //cross origin resource sharing
 const port = process.env.PORT || 5000;
 
 app.use(cors());
@@ -11,6 +11,7 @@ app.get("/", (req, res) => {
   res.send("News API Running");
 });
 
+// Get a category news
 app.get("/news-categories", (req, res) => {
   res.send(categories);
 });
